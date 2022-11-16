@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Ryan Tjia's Profile</title>
+
+		<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js"></script>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+		<!-- JavaScripts -->
+		<!-- For stuff like buttons, dropdowns, etc. -->
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+	</head>
+
+	<body>
+		<div class="row" style="border-bottom: solid grey; padding-bottom: 10px;">
+			<div class="col-lg-8 mx-auto">
+				<div class="row">
+					<div class="col-lg-6 align-self-center personal-info">
+						<span>Name:</span> Ryan Tjia<br>
+						<span>Contacts</span>
+						<ul>
+							<li>(929) 300-2966</li>
+							<li>tjia.ryan0131@gmail.com</li>
+						</ul>
+						<span>Address: </span>82-01 Britton Ave Apt 2D, Queens, NY 11373<br>
+						<a href="https://www.linkedin.com/in/ryan-tjia-96a143199/" target="_blank">LinkedIn Profile</a>
+					</div>
+
+					<div class="col-lg-6">
+						<img src="local_files/Profile.png" class="img-fluid w-50">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Handlebars to view different sections of the profile -->
+		<div class="row" style="margin-top: 5px;">
+			<div class="col-lg-8 mx-auto">
+				<div class="row info-tabs">
+					<div onclick="changeTemplate('#Education', '#00aeff')" class="col-sm-3 color-blue">Education</div>
+					<div onclick="changeTemplate('#Skills', '#00ff09')" class="col-sm-3 color-green">Skills & Interests</div>
+					<div onclick="changeTemplate('#Projects', '#ffeb3b')" class="col-sm-3 color-yellow">Projects</div>
+					<div onclick="changeTemplate('#Work', '#ff9900')" class="col-sm-3 color-orange">Work Experience</div>
+				</div>
+			</div>
+
+			<div id="view_template" class="col-lg-10 mx-auto">
+				<div class="row info-border" style="border-color: #00aeff;"></div>
+			</div>
+		</div>
+	</body>
+
+	<!-- Handlebars -->
+	<script id="Education" type="text/x-handlebars-template">
+		<div class="info">
+			<div class="row">
+				<div class="col-lg-12">
+					<div>
+						<span class="info-heading">St. John's University</span>
+						<span style="float: right;">Jamaica, NY</span>
+					</div>
+					<div style="font-style: italic;">
+						Bachelor of Science in Computer Science | GPA: 3.74
+						<span style="float: right;">Expected May 2023</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" style="margin-top: 20px">
+				<div class="col-lg-12 info-heading">
+					Relevant Coursework
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-6">
+					<ul>
+						{{#each course1}}
+							<li>
+								{{title}} -
+								<span style="font-style: italic;">{{progress}}</span>
+							</li>
+						{{/each}}
+					</ul>
+				</div>
+
+				<div class="col-lg-6">
+					<ul>
+						{{#each course2}}
+							<li>
+								{{title}} -
+								<span style="font-style: italic;">{{progress}}</span>
+							</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script id="Skills" type="text/x-handlebars-template">
+		<div class="info">hi</div>
+	</script>
+
+	<script id="Projects" type="text/x-handlebars-template">
+		<div class="info">hi</div>
+	</script>
+
+	<script id="Work" type="text/x-handlebars-template">
+		<div class="info">hi</div>
+	</script>
+
+</html>
