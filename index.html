@@ -47,15 +47,15 @@
 		<div class="row" style="margin-top: 5px;">
 			<div class="col-lg-8 mx-auto">
 				<div class="row info-tabs">
-					<div onclick="changeTemplate('#Education', '#00aeff')" class="col-sm-3 color-blue">Education</div>
-					<div onclick="changeTemplate('#Skills', '#00ff09')" class="col-sm-3 color-green">Skills & Interests</div>
-					<div onclick="changeTemplate('#Projects', '#ffeb3b')" class="col-sm-3 color-yellow">Projects</div>
-					<div onclick="changeTemplate('#Work', '#ff9900')" class="col-sm-3 color-orange">Work Experience</div>
+					<div onclick="GetData('Education', '#00aeff')" class="col-sm-3 color-blue">Education</div>
+					<div onclick="GetData('Skills', '#00ff09')" class="col-sm-3 color-green">Skills & Interests</div>
+					<div onclick="GetData('Projects', '#ffeb3b')" class="col-sm-3 color-yellow">Projects</div>
+					<div onclick="GetData('Work', '#ff9900')" class="col-sm-3 color-orange">Work Experience</div>
 				</div>
 			</div>
 
 			<div id="view_template" class="col-lg-10 mx-auto">
-				<div class="row info-border" style="border-color: #00aeff;"></div>
+				<div class="row info-border" style="border-color: #00aeff; overflow-y: auto;"></div>
 			</div>
 		</div>
 	</body>
@@ -109,7 +109,58 @@
 	</script>
 
 	<script id="Skills" type="text/x-handlebars-template">
-		<div class="info">hi</div>
+		<div class="info">
+			<div class="row">
+				<div class="col-lg-6">
+					<span class="info-heading">Programming Languages</span>
+					<ul>
+						{{#each languages}}
+							<li>{{this}}</li>
+						{{/each}}
+					</ul>
+				</div>
+
+				<div class="col-lg-6">
+					<span class="info-heading">Operating Systems</span>
+					<ul>
+						{{#each operating}}
+							<li>{{this}}</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-6">
+					<span class="info-heading">Development Software</span>
+					<ul>
+						{{#each development}}
+							<li>{{this}}</li>
+						{{/each}}
+					</ul>
+				</div>
+
+				<div class="col-lg-6">
+					<span class="info-heading">Office Software</span>
+					<ul>
+						{{#each office}}
+							<li>{{this}}</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-6">
+					<span class="info-heading">Interests</span>
+					<ul>
+						{{#each interest}}
+							<li>{{this}}</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+		</div>
 	</script>
 
 	<script id="Projects" type="text/x-handlebars-template">
