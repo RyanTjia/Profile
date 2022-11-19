@@ -54,6 +54,10 @@ var GetData = (info, color) => {
 		else if (info == "Skills") {
 			data = raw_data[0];
 		}
+
+		else if (info == "Projects") {
+			data = raw_data;
+		}
 		
 	})
 	.then(() => {
