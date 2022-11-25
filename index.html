@@ -29,11 +29,17 @@
 						<span>Name:</span> Ryan Tjia<br>
 						<span>Contacts</span>
 						<ul>
-							<li>(929) 300-2966</li>
-							<li>tjia.ryan0131@gmail.com</li>
+							<li>
+								<a href="tel:9293002966">(929)300-2966</a>
+							</li>
+							<li>
+								<a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tjia.ryan0131@gmail.com" target="_blank">tjia.ryan0131@gmail.com</a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/ryan-tjia-96a143199/" target="_blank">LinkedIn Profile</a>
+							</li>
 						</ul>
 						<span>Address: </span>82-01 Britton Ave Apt 2D, Queens, NY 11373<br>
-						<a href="https://www.linkedin.com/in/ryan-tjia-96a143199/" target="_blank">LinkedIn Profile</a>
 					</div>
 
 					<div class="col-lg-6">
@@ -50,7 +56,7 @@
 					<div onclick="GetData('Education', '#00aeff')" class="col-sm-3 color-blue">Education</div>
 					<div onclick="GetData('Skills', '#00ff09')" class="col-sm-3 color-green">Skills & Interests</div>
 					<div onclick="GetData('Projects', '#ffeb3b')" class="col-sm-3 color-yellow">Projects</div>
-					<div onclick="GetData('Work', '#ff9900')" class="col-sm-3 color-orange">Work Experience</div>
+					<div onclick="GetData('Experiences', '#ff9900')" class="col-sm-3 color-orange">Experiences</div>
 				</div>
 			</div>
 
@@ -181,8 +187,70 @@
 		</div>
 	</script>
 
-	<script id="Work" type="text/x-handlebars-template">
-		<div class="info">hi</div>
+	<script id="Experiences" type="text/x-handlebars-template">
+		<div class="info">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="info-heading">Relevant Experiences</span>
+					{{#each relevant}}
+						<div class="row">
+							<div class="col-lg-12">
+								<b>{{title}}</b>
+								<span style="float: right;">{{location}}</span>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-12">
+								<i>{{position}}</i>
+								<span style="float: right;">{{start}} - {{end}}</span>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-12">
+								<ul>
+									{{#each summary}}
+										<li>{{point}}</li>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+					{{/each}}
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="info-heading">Work Experiences</span>
+					{{#each work}}
+						<div class="row">
+							<div class="col-lg-12">
+								<b>{{title}}</b>
+								<span style="float: right;">{{location}}</span>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-12">
+								<i>{{position}}</i>
+								<span style="float: right;">{{start}} - {{end}}</span>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-12">
+								<ul>
+									{{#each summary}}
+										<li>{{point}}</li>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
 	</script>
 
 </html>

@@ -51,11 +51,7 @@ var GetData = (info, color) => {
 			data['course2'] = temp_data.slice(length, temp_data.length + 1);
 		}
 
-		else if (info == "Skills") {
-			data = raw_data[0];
-		}
-
-		else if (info == "Projects") {
+		else {
 			data = raw_data;
 		}
 		
