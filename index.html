@@ -21,52 +21,87 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 	</head>
 
-	<body>
-		<div class="row" style="border-bottom: solid grey; padding-bottom: 10px;">
-			<div class="col-lg-8 mx-auto">
-				<div class="row">
-					<div class="col-lg-6 align-self-center personal-info">
-						<span>Name:</span> Ryan Tjia<br>
-						<span>Contacts</span>
-						<ul>
-							<li>
-								<a href="tel:9293002966">(929)300-2966</a>
-							</li>
-							<li>
-								<a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tjia.ryan0131@gmail.com" target="_blank">tjia.ryan0131@gmail.com</a>
-							</li>
-							<li>
-								<a href="https://www.linkedin.com/in/ryan-tjia-96a143199/" target="_blank">LinkedIn Profile</a>
-							</li>
-						</ul>
-						<span>Address: </span>New York, NY<br>
-					</div>
+	<body class='bodyBackground'>
+		<nav class='navbar navbar-expand-lg justify-content-between bg-dark navbar-dark'>
+			<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#collapsibleNavbar'>
+				<span class='navbar-toggler-icon'></span>
+			</button>
 
-					<div class="col-lg-6">
-						<img src="local_files/Profile.png" class="img-fluid w-50">
-					</div>
-				</div>
+			<div class='collapse navbar-collapse' id='collapsibleNavbar'>
+				<ul class='navbar-nav mx-auto'>
+					<li class='nav-item active'>
+						<span class='navbar-brand customTab' onclick='changeTemplate("Profile")'>
+							Profile
+						</span>
+					</li>
+					<li class='nav-item active'>
+						<span class='navbar-brand customTab' onclick='GetData("Education")'>
+							Education
+						</span>
+					</li>
+					<li class='nav-item active'>
+						<span class='navbar-brand customTab' onclick='GetData("Skills")'>
+							Skills & Interests
+						</span>
+					</li>
+					<li class='nav-item active'>
+						<span class='navbar-brand customTab' onclick='GetData("Projects")'>
+							Projects
+						</span>
+					</li>
+					<li class='nav-item active'>
+						<span class='navbar-brand customTab' onclick='GetData("Experiences")'>
+							Experiences
+						</span>
+					</li>
+				</ul>
 			</div>
-		</div>
+		</nav>
 
-		<!-- Handlebars to view different sections of the profile -->
-		<div class="row" style="margin-top: 5px;">
-			<div class="col-lg-8 mx-auto">
-				<div class="row info-tabs">
-					<div onclick="GetData('Education', '#00aeff')" class="col-sm-3 color-blue">Education</div>
-					<div onclick="GetData('Skills', '#00ff09')" class="col-sm-3 color-green">Skills & Interests</div>
-					<div onclick="GetData('Projects', '#ffeb3b')" class="col-sm-3 color-yellow">Projects</div>
-					<div onclick="GetData('Experiences', '#ff9900')" class="col-sm-3 color-orange">Experiences</div>
-				</div>
-			</div>
-
-			<div id="view_template" class="col-lg-10 mx-auto">
-				<div class="row info-border" style="border-color: #00aeff; overflow-y: auto;"></div>
+		<div class='row'>
+			<div id='view_template' class='col-lg-10 mx-auto'>
 			</div>
 		</div>
 	</body>
 
 	<!-- Handlebars -->
+	<script id="Profile" type="text/x-handlebars-template">
+		<div class="info">
+			<div class="row">
+				<div class="col-lg-10 mx-auto">
+					<div class="row">
+						<div class="col-lg-6 align-self-center personal-info">
+							<div>
+								<span>Name:</span> Ryan Tjia
+							</div>
+							<div>
+								<span>Contacts</span>
+							</div>
+							<ul>
+								<li>
+									<a href="tel:9293002966">(929)300-2966</a>
+								</li>
+								<li>
+									<a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tjia.ryan0131@gmail.com" target="_blank">tjia.ryan0131@gmail.com</a>
+								</li>
+								<li>
+									<a href="https://www.linkedin.com/in/ryantjia/" target="_blank">LinkedIn Profile</a>
+								</li>
+							</ul>
+							<div>
+								<span>Address:</span> New York, NY
+							</div>
+						</div>
+
+						<div class="col-lg-6">
+							<img src="local_files/Profile.png" class="img-fluid w-50">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+
 	<script id="Education" type="text/x-handlebars-template">
 		<div class="info">
 			<div class="row">
@@ -81,7 +116,7 @@
 					</div>
 				</div>
 			</div>
-
+			<hr class='border border-dark'>
 			<div class="row" style="margin-top: 20px">
 				<div class="col-lg-12 info-heading">
 					Relevant Coursework

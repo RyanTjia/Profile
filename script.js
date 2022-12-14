@@ -17,22 +17,10 @@ var data = {
 
 //Loads the main menu once the page is ready
 window.onload = () => {
-	GetData('Education', '#00aeff');
+	changeTemplate('Profile');
 };
 
-/*document.addEventListener("DOMContentLoaded", () => {
-
-	//This is event delegation, any child member of "view_template" will trigger this
-	document.querySelector(".info-tabs").onclick = (e) => {
-		handle_event(e);
-	};
-});
-
-function handle_event(e) {
-	changeTemplate(e.target.id);
-};*/
-
-var GetData = (info, color) => {
+var GetData = (info) => {
 	data = {};
 	var temp_data;
 
@@ -57,18 +45,14 @@ var GetData = (info, color) => {
 		
 	})
 	.then(() => {
-		changeTemplate(`#${info}`, color);
+		changeTemplate(info);
 	})
 }
 
-const changeTemplate = function(identifier, color) {
-
-	var divElement = document.querySelector("#view_template").querySelector("div");
-	divElement.style.borderColor = color;
-
-	var source = document.querySelector(identifier).innerHTML;
+const changeTemplate = function(identifier) {
+	var source = document.querySelector(`#${identifier}`).innerHTML;
 	var template = Handlebars.compile(source);
 	var html = template(data);
 
-	document.querySelector("#view_template").querySelector("div").innerHTML = html;
+	document.querySelector("#view_template").innerHTML = html;
 };
