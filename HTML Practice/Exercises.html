@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practice Sample</title>
+	<script src="Exercises.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div>
+		<h1>Exercise 1</h1>
+		<button id='button' onclick='StartOne()'>Start Game</button>
+		<div id='UIOne'>
+			<span></span>
+			<span id='valueOne'></span>
+			<br>
+			<span></span>
+			<span id='timerOne'></span>
+			<br>
+			<span></span>
+			<span id='scoreOne'></span>
+		</div>
+		<table id='One'>
+		</table>
+	</div>
+	<div>
+		<h1>Exercise 2</h1>
+		<form id='formTwo' onsubmit='submitTwo(); return false'>
+			<div>
+				<label for='titleTwo'>Title</label><br>
+				<textarea id='titleTwo' required></textarea>
+			</div>
+			<div>
+				<label for='authorsTwo'>Authors</label>
+				<input type='text' id='authorsTwo' required>
+			</div>
+			<div>
+				<label for='thematicTwo'>Thematic</label>
+				<input type='text' id='thematicTwo' readonly>
+				<button type='button' onclick='InstantCollapsible()'>Add Thematic</button>
+			</div>
+			<div style='display: none'>
+				<select id='listTwo'>
+					<option value='Beauty'>Beauty</option>
+					<option value='Justice'>Justice</option>
+					<option value='Family'>Family</option>
+					<option value='Loyalty'>Loyalty</option>
+					<option value='Betrayal'>Betrayal</option>
+				</select>
+				<button type='button' onclick='addThematic()'>Add</button>
+				<button type='button' onclick='InstantCollapsible()'>Close</button>
+			</div>
+			<input type='submit' value='Submit'>
+		</form>
+	</div>
+	<div>
+		<h1>Exercise 3</h1>
+		<button id='button' onclick='StartThree()'>Start Game</button>
+		<div id='UIThree'>
+			<span></span>
+			<br>
+			<span></span>
+			<span id='timerThree'></span>
+			<br>
+			<span></span>
+			<span id='greenThree'></span>
+			<br>
+			<span></span>
+			<span id='redThree'></span>
+		</div>
+		<table id='Three'>
+		</table>
+	</div>
+	<div>
+		<h1>Exercise 4</h1>
+		<table id='Four' class='defaultTable4'>
+			<tr>
+				<td>
+					<img src="https://th-thumbnailer.cdn-si-edu.com/IzJ6U8XJZK3JCDkLIybv03GqaUQ=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/25/f0/25f08cff-0355-4001-86ad-28950a866af4/grandteton.jpg">
+				</td>
+				<td>
+					<img src="https://www.travelmanagers.com.au/wp-content/uploads/2012/08/AdobeStock_254529936_Railroad-to-Denali-National-Park-Alaska_750x500.jpg">
+				</td>
+				<td>
+					<img src="https://www.celebritycruises.com/blog/content/uploads/2021/02/alaska-mountains-hero-denali-1920x890.jpg">
+				</td>
+				<td>
+					<img src="https://images.immediate.co.uk/production/volatile/sites/4/2021/08/mountains-7ddde89.jpg?quality=90&webp=true&resize=940,400">
+				</td>
+			</tr>
+		</table>
+
+		<table id='relocation' class='defaultTable4'>
+			<tr>
+			</tr>
+		</table>
+		<button class='button4' onclick='ResetFour()'>Reset</button>
+	</div>
+</body>
+</html>
