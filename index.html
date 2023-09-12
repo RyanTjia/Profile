@@ -221,8 +221,11 @@
 					<ul>
 						{{#each this}}
 							<li>
-								{{title}} -
-								<a href={{link}} target="_blank">link</a>
+								{{title}}
+
+								{{#if link}}
+									- <a href={{link}} target="_blank">link</a>
+								{{/if}}
 							</li>
 						{{/each}}
 					</ul>
