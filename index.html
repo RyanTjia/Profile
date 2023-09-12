@@ -218,22 +218,19 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<span class="info-heading">Past Projects</span>
-					<ul>
-						{{#each this}}
-							<li>
-								<details>
-									<summary>
-										{{title}}
+		
+					{{#each this}}
+						<details>
+							<summary>
+								{{title}}
 
-										{{#if link}}
-											- <a href={{link}} target="_blank">link</a>
-										{{/if}}
-									</summary>
-									{{desc}}
-								</details>
-							</li>
-						{{/each}}
-					</ul>
+								{{#if link}}
+									- <a href={{link}} target="_blank">link</a>
+								{{/if}}
+							</summary>
+							{{desc}}
+						</details>
+					{{/each}}
 				</div>
 			</div>
 		</div>
