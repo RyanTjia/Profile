@@ -221,11 +221,16 @@
 					<ul>
 						{{#each this}}
 							<li>
-								{{title}}
+								<details>
+									<summary>
+										{{title}}
 
-								{{#if link}}
-									- <a href={{link}} target="_blank">link</a>
-								{{/if}}
+										{{#if link}}
+											- <a href={{link}} target="_blank">link</a>
+										{{/if}}
+									</summary>
+									{{desc}}
+								</details>
 							</li>
 						{{/each}}
 					</ul>
